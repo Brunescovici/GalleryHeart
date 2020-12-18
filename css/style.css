@@ -324,7 +324,7 @@ footer p:last-child {
 
 .description_cont {
     width: 100%;
-    display: flex;
+    display: none;
 }
 
 .artinfo_cont {
@@ -334,6 +334,23 @@ footer p:last-child {
 .description {
     text-align: left;
     margin-top: 70px;
+}
+
+.support_charities_cont {
+    margin-top: 50px;
+}
+
+#charitiesDropDown {
+    background-color: white;
+    border: 2px solid rgba(0,0,0,0.1);
+    outline: none;
+    height: 40px;
+    width: 250px;
+    font-size: 14px;
+}
+
+#charitiesDropDown option {
+    text-align: center;
 }
 
 .picShortInfo_cont {
