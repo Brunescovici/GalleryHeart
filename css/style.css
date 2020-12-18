@@ -237,6 +237,7 @@ footer input {
 .some_icons img {
     width: 45px;
     margin-right: 35px;
+    cursor: pointer;
 }
 
 .some_icons img:last-child {
