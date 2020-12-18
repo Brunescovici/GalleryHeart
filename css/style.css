@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    font-family: Montserrat;
+}
+
+/* NAVIGATION AND HEADER */
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 75px;
+    align-items: center;
+}
+
+.navMenu {
+    user-select: none;
+    position: relative;
+    margin: auto;
+    margin-right: 50px;
+    padding: 0;
+}
+
+.navMenu li {
+    display: inline;
+    margin-right: 45px;
+    color: #3e4749;
+}
+
+.navMenu li a {
+    color: #3e4749;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navMenu li a:hover {
+    color: #879499;
+}
+
+.selected {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#shopping_cart {
+    width: 30px;
+    margin-right: 10%;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* THE SLIDER */
+
+.slideshow {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+.slideshow::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.show_cont img {
+    margin: 0 60px;
+    width: 1000px;
+    cursor: pointer;
+}
+
+.show_cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    animation: sShow 25s infinite;
+}
+
+@keyframes sShow {
+    0% {
+        transform: translateX(1050px);
+    }
+    15% {
+        transform: translateX(1050px);
+    }
+    30% {
+        transform: translateX(0px);
+    }
+    45% {
+        transform: translateX(0px);
+    }
+    60% {
+        transform: translateX(-1050px);
+    }
+    75% {
+        transform: translateX(-1050px);
+    }
+    100% {
+        transform: translateX(1050px);
+    }
+}
+
+/* ARTIST OF THE MONTH */
+
