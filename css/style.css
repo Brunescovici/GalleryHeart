@@ -270,12 +270,12 @@ footer p:last-child {
 
 /* GALLERY PAGE */
 
-/* FILTERS */
-
 #gallery_main {
     display: flex;
     margin-top: 50px;
 }
+
+/* FILTERS */
 
 .filters_cont {
     margin-top: 60px;
@@ -371,4 +371,51 @@ footer p:last-child {
 .picShortInfo_cont img {
     width: 600px;
     margin: 50px;
+}
+
+/* ABOUT PAGE */
+
+/* who we are */
+
+.whoWeAre_cont {
+    background-color: white;
+}
+
+.whoWeAre img {
+    width: 500px;
+}
+
+/* HOW IT WORKS */
+
+.howItWorks_cont {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+}
+
+.howItWorks {
+    position: relative;
+}
+
+.howItWorks h1 {
+    position: absolute;
+    color: white;
+    right: 30px;
+    top: 10px;
+}
+
+.howItWorks img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.howItWorks_cont p {
+    font-size: 20px;
+    margin: 40px 100px;
+}
+
+.howItWorks_cont p span {
+    color: var(--button-bg-color);
+    font-weight: bold;
 }
