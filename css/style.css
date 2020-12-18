@@ -17,6 +17,11 @@ h2 {
     font-weight: bold;
 }
 
+.selected {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: default;
+}
+
 button {
     font-size: 14px;
     cursor: pointer;
@@ -54,6 +59,7 @@ header {
     display: inline;
     margin-right: 45px;
     color: #3e4749;
+    font-size: 14px;
 }
 
 .navMenu li a {
@@ -64,10 +70,6 @@ header {
 
 .navMenu li a:hover {
     color: #879499;
-}
-
-.selected {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #shopping_cart {
@@ -184,10 +186,18 @@ header {
 
 .recentArtwork_picCont {
     display: grid;
-    grid-template-columns: repeat(1fr, 3);
-    grid-template-rows: auto;
-    grid-column-gap: 15px;
     margin-top: 30px;
+    margin-bottom: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
+    align-items: center;
+    user-select: none;
+}
+
+.recentArtwork_picCont img {
+    width: 100%;
+    cursor: pointer;
 }
 
 .recentArtwork_cont button {
@@ -248,4 +258,57 @@ footer p:last-child {
     text-align: left;
     width: 80%;
     margin-bottom: 0;
+}
+
+/* GALLERY PAGE */
+
+/* FILTERS */
+
+#gallery_main {
+    display: flex;
+    margin-top: 50px;
+}
+
+.filters_cont {
+    margin-top: 60px;
+    user-select: none;
+}
+
+.filters_cont ul li {
+    list-style-type: none;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #3e4749;
+    cursor: pointer;
+}
+
+.filters_cont ul li:hover {
+    color: #879499;
+}
+
+.filters_cont ul .selected:hover {
+    color: #3e4749;
+}
+
+.content_cont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0 150px;
+}
+
+.art_cont {
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
+    align-items: center;
+    user-select: none;
+}
+
+.art_cont img {
+    width: 100%;
+    cursor: pointer;
 }
