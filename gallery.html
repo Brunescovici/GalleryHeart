@@ -26,20 +26,20 @@
         <main id="gallery_main">
             <div class="filters_cont">
                 <ul>
-                    <li><span class="selected">ALL ART</span></li>
-                    <li>PAINTINGS</li>
-                    <li>PHOTOGRAPHY</li>
-                    <li>DIGITAL ART</li>
-                    <li>MEDIA</li>
+                    <li id="allArt_filter" class="filter selected">ALL ART</li>
+                    <li id="painting_filter" class="filter">PAINTINGS</li>
+                    <li id="photography_filter" class="filter">PHOTOGRAPHY</li>
+                    <li id="digitalArt_filter" class="filter">DIGITAL ART</li>
+                    <li id="media_filter" class="filter">MEDIA</li>
                 </ul>
             </div>
             <div class="content_cont">
                 <h1>GALLERY.</h1>
                 <div class="art_cont">
-                    <img src="res/alfred-leung.jpg">
-                    <img src="res/pierrick.jpg">
-                    <img src="res/so-flow.jpg">
-                    <img src="res/toa.jpg">
+                    <img class="art_pic painting" src="res/alfred-leung.jpg">
+                    <img class="art_pic photography" src="res/pierrick.jpg">
+                    <img class="art_pic digitalArt" src="res/so-flow.jpg">
+                    <img class="art_pic media" src="res/toa.jpg">
                 </div>
                 <div class="description_cont">
                     <div class="artinfo_cont">
@@ -85,4 +85,6 @@
             <p>© Copyright 2020 "Smarty Pants"</p>
         </footer>
     </body>
+
+    <script src="js/script.js"></script>
 </html>
