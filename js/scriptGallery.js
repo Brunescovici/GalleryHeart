@@ -13,6 +13,8 @@ const noneText = document.getElementById("noneLeft");
 function checkArtLeft() {
     if(artPics.length == 0)
         noneText.style.display = "block";
+    else
+        noneText.style.display = "none";
 }
 
 function resetFilter() {
@@ -29,6 +31,8 @@ function filterPainting() {
     document.querySelector("#painting_filter").classList.add("selected");
     if(paintings.length == 0)
         noneText.style.display = "block";
+    else
+        noneText.style.display = "none";
 }
 
 function filterPhotography() {
@@ -38,6 +42,8 @@ function filterPhotography() {
     document.querySelector("#photography_filter").classList.add("selected");
     if(photographies.length == 0)
         noneText.style.display = "block";
+    else
+        noneText.style.display = "none";
 }
 
 function filterDigitalArt() {
@@ -47,6 +53,8 @@ function filterDigitalArt() {
     document.querySelector("#digitalArt_filter").classList.add("selected");
     if(digitalArts.length == 0)
         noneText.style.display = "block";
+    else
+        noneText.style.display = "none";
 }
 
 function filterMedia() {
@@ -56,6 +64,8 @@ function filterMedia() {
     document.querySelector("#media_filter").classList.add("selected");
     if(medias.length == 0)
         noneText.style.display = "block";
+    else
+        noneText.style.display = "none";
 }
 
 function filterAll() {
@@ -66,6 +76,17 @@ function filterAll() {
     document.querySelector("#allArt_filter").classList.add("selected");
     if(artPics.length == 0)
         noneText.style.display = "block";
+    else
+        noneText.style.display = "none";
+}
+
+function openBuyMenu() {
+    resetFilter();
+    document.getElementById("artDesc_cont").style.display = "flex";
+}
+
+function openShopWindow() {
+    window.open("shop.html", "_self");
 }
 
 // event listeners
@@ -75,6 +96,8 @@ document.querySelector("#photography_filter").addEventListener("click", filterPh
 document.querySelector("#digitalArt_filter").addEventListener("click", filterDigitalArt);
 document.querySelector("#media_filter").addEventListener("click", filterMedia);
 document.querySelector("#allArt_filter").addEventListener("click", filterAll);
+document.getElementById("addToCart").addEventListener("click", openShopWindow);
+document.getElementsByClassName("art_pic")[0].addEventListener("click", openBuyMenu);
 
 // page loaded
 

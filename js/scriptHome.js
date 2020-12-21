@@ -9,6 +9,8 @@ const seeMore = document.getElementById("seeMoreButton");
 function checkArtLeft() {
     if(artPics.length == 0)
         noneText.style.display = "block";
+    else
+        noneText.style.display = "none";
 }
 
 function openGalleryPage() {

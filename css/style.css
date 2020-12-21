@@ -2,6 +2,7 @@
     margin: 0;
     font-family: Montserrat;
     letter-spacing: 0.8px;
+    color: var(--main-color);
 }
 /* MEGA CHANGES :O */
 
@@ -44,6 +45,7 @@ button {
 
 button span {
     border-bottom: 2px var(--button-color) solid;
+    color: var(--button-color);
 }
 
 /* NAVIGATION AND HEADER */
@@ -356,7 +358,7 @@ footer p:last-child {
 }
 
 #noneLeft {
-    display:
+    display: none;
 }
 
 /* FILTERS */
@@ -437,7 +439,7 @@ footer p:last-child {
     text-align: center;
 }
 
-.picShortInfo_cont {
+#picShortInfo_cont {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -452,7 +454,7 @@ footer p:last-child {
     font-size: 14px;
 }
 
-.picShortInfo_cont img {
+#picShortInfo_cont img {
     width: 600px;
     margin: 50px;
 }
@@ -548,4 +550,110 @@ footer p:last-child {
 .focus_item h3 {
     display: list-item;
     margin-left: 20px;
+}
+
+/* shop site */
+
+#shopH {
+    text-align: center;
+    margin-top: 70px;
+}
+
+#shop_cont {
+    display: grid;
+    grid-template-columns: repeat(1fr, 5);
+    margin: 50px 15% 0;
+    grid-row-gap: 50px;
+    grid-column-gap: 90px;
+    align-items: center;
+}
+
+#shop_cont img {
+    width: 100%;
+    min-width: 150px;
+    max-width: 280px;
+}
+
+#productCol {
+    grid-column: 2/3;
+    text-align: left;
+}
+
+#priceCol {
+    grid-column: 3/4;
+    text-align: center;
+}
+
+#quantityCol {
+    grid-column: 4/5;
+    text-align: center;
+}
+
+#totalCol {
+    grid-column: 5/6;
+    text-align: right;
+}
+
+.quantitySelector {
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.quantitySelector button {
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 40px;
+    margin: 0 10px;
+}
+
+.quantitySelector button:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.quantitySelector button:active {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.quantitySelector span {
+    border-bottom: 0;
+    color: white;
+    font-weight: 800;
+}
+
+#totalLine {
+    grid-column: 1/6;
+    width: 100%;
+    height: 1px;
+    background-color: var(--sec-color);
+}
+
+#totalText {
+    grid-column: 1/3;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+#totalValue {
+    grid-column: 3/6;
+    text-align: right;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.stackPrice {
+    text-align: center;
+}
+
+.totalPrice {
+    text-align: right;
+}
+
+.shopButtons {
+    display: flex;
+    margin: 20px 15%;
+    justify-content: space-between;
 }
