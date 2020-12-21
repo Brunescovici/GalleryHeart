@@ -212,6 +212,85 @@ header {
     margin: auto;
 }
 
+/* CONTACT PAGE */
+.contact_cont {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+    height: 600px;
+}
+
+.contact_cont h1 {
+    position: relative;
+    text-align: center;
+    top: 100px;
+    left: 264px;
+    line-height: 55px;
+}
+
+.contact_picCont {
+    display: grid;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
+    align-items: center;
+    user-select: none;
+}
+
+.contact_picCont img {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    top: -50px;
+    left: 40px;
+}
+
+.contact_textCont {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
+    align-items: center;
+    user-select: none;
+    margin-top: -500px;
+    margin-left: 700px;
+}
+
+.contactname h3 {
+    position: relative;
+    font-style: italic;
+    top: 40px;
+    left: -100px;
+    font-size: 15px;
+    border-bottom: solid black 0.5px;
+    line-height: 70px;
+}
+
+.messagebox {
+    position: relative;
+    outline: solid black 0.5px;
+    height: 100px;
+    width: 500px;
+    top: 30px;
+    right: 100px;
+}
+
+.messagebox h3 {
+    font-size: 15px;
+    font-style: italic;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.contact_cont button {
+    position: relative;
+    top: -93px;
+    left: 600px;
+    padding: 7px;
+}
+
 /* FOOTER */
 
 footer {
