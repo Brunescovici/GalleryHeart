@@ -213,11 +213,12 @@ header {
 }
 
 /* CONTACT PAGE */
+
+
 .contact_cont {
     display: flex;
     flex-direction: column;
     margin: 0 10%;
-    height: 600px;
 }
 
 .contact_cont h1 {
