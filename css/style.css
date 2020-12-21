@@ -419,3 +419,49 @@ footer p:last-child {
     color: var(--button-bg-color);
     font-weight: bold;
 }
+
+
+/* charities */
+
+.charities_cont {
+    width: 200px;
+}
+
+.charities_description_cont img {
+    width: 100%;
+    min-width: 600px;
+    object-fit: cover;
+    margin-top: 50px;
+}
+
+.charities_h {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 30px;
+}
+
+.title_desc_cont {
+    display: flex;
+    margin-top: 50px;
+}
+
+.title_desc_cont:last-child {
+    margin-bottom: 100px;
+}
+
+.title_desc_cont h2 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-right: 40px;
+    width: 370px;
+    text-align: right;
+}
+
+.desc_cherity {
+    width: 100%;
+}
+
+.focus_item h3 {
+    display: list-item;
+    margin-left: 20px;
+}

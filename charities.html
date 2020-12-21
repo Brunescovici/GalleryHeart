@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <link rel="stylesheet" href="css/style.css">
+        <title> Gallery Heart </title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <img id="header_logo">
+            <ul class="navMenu">
+                <li><a href="index.html">HOME</a></li>
+                <li class="selected">GALLERY</li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">CHARITIES</a></li>
+                <li><a href="#">NEWSLETTER</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <img id="shopping_cart" src="res/shopping-cart.png">
+        </header>
+        <main id="gallery_main">
+            <div class="filters_cont charities_cont">
+                <ul>
+                    <li><span class="selected">MECA</span></li>
+                    <li>EGNA LEGNA</li>
+                    <li>UN WORLD FOOD PROGRAMME</li>
+                    <li>UN POPULATION FUND</li>
+                </ul>
+            </div>
+            <div class="content_cont">
+                <h1>WHO WE HELP.</h1>
+                <p>Learn a little about the charities we support.</p>
+            </div>
+        </main>
+        <template class="charities_template">
+            <div class="charities_description_cont">
+                    <img src="res/MECA.png">
+                    <h1 class="charities_h"><i>MECA</i></h1>
+                    <div class="title_desc_cont">
+                        <h2>WHO ARE THEY?</h2>
+                        <div class="desc_cherity">
+                            <p>
+                                'The Middle East Children’s Alliance (MECA) works to protect the rights and improve the lives of children in the Middle East through aid, empowerment and education.
+                                <br><br>
+                                In the Middle East, MECA provides humanitarian aid, partners with community organizations to run projects for children, and supports income-generation projects. In the US and internationally, MECA raises awareness about the lives of children in the region and encourages meaningful action."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="title_desc_cont">
+                        <h2>FOCUS</h2>
+                        <div class="desc_cherity">
+                            <div class="focus_item">
+                                <h3>DIRECT AID</h3>
+                                <p>Providing food, medicine, medical supplies, clothes, books, toys and school supplies to children</p>
+                            </div>
+                            <div class="focus_item">
+                                <h3>CLEAN, SAFE WATER</h3>
+                                <p>Building and installing water purification units in schools and preschools throughout Gaza</p>
+                            </div>
+                            <div class="focus_item">
+                                <h3>FINANCIAL SUPPORT FOR COMMUNITY PROJECTS</h3>
+                                <p>Partnering with clinics, kindergartens, counseling centers, libraries, accessible parks and playgrounds, sports teams, arts and media programs</p>
+                            </div>
+                            <div class="focus_item">
+                                <h3>UNIVERSITY SCHOLARSHIPS</h3>
+                                <p>Awarding scholarships to talented and ambitious high school graduates in the West Bank and Gaza to obtain degrees and the skills to make important contributions to their communities and their country</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </template>
+        <footer>
+            <h2>Stay in touch</h2>
+            <p>Sign up to receive our newsletter by email and we will keep you updated with our latest news, blogs, statements and events.</p>
+            <div>
+                <input placeholder="Enter your email address here...">
+                <button>SUBSCRIBE</button>
+            </div>
+            <div class="some_icons">
+                <img src="res/instagram.png">
+                <img src="res/facebook.png">
+                <img src="res/envelope.png">
+            </div>
+            <p>© Copyright 2020 "Smarty Pants"</p>
+        </footer>
+    </body>
+</html>
