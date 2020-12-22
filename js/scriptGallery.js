@@ -1,3 +1,25 @@
+//fetch
+
+window.addEventListener("DOMContentLoaded", getData);
+
+function getData() {
+    fetch("https://viburnumnoctis.com/wp/wp-json/wp/v2/media")
+        .then(res => res.json())
+        .then(data => showData(data));
+
+}
+
+function showData(data) {
+    data.forEach(setPicture);
+    checkArtLeft();
+    document.querySelectorAll(".art_pic").forEach(function(item) {
+        item.addEventListener('click', function() {
+            picLink = item.src;
+            openBuyMenu();
+        });
+    });
+}
+
 //vars
 
 const artPics = document.getElementsByClassName("art_pic");
@@ -7,11 +29,23 @@ const digitalArts = document.getElementsByClassName("digitalArt");
 const medias = document.getElementsByClassName("media");
 const filters = document.getElementsByClassName("filter");
 const noneText = document.getElementById("noneLeft");
+let x = 0, picLink;
 
 //functions
 
+function setPicture(data) {
+    if(data.id < 200) {
+        const Template = document.querySelector("#artPics_temp").content;
+        const cloneArt = Template.cloneNode(true);
+        cloneArt.querySelector(".art_pic").src = data.media_details.sizes.full.source_url;
+        const parentCont = document.querySelector(".art_cont");
+        parentCont.appendChild(cloneArt);
+        x=1;
+    }
+}
+
 function checkArtLeft() {
-    if(artPics.length == 0)
+    if(x == 0)
         noneText.style.display = "block";
     else
         noneText.style.display = "none";
@@ -33,6 +67,7 @@ function filterPainting() {
         noneText.style.display = "block";
     else
         noneText.style.display = "none";
+    document.getElementById("artDesc_cont").style.display = "none";
 }
 
 function filterPhotography() {
@@ -44,6 +79,7 @@ function filterPhotography() {
         noneText.style.display = "block";
     else
         noneText.style.display = "none";
+    document.getElementById("artDesc_cont").style.display = "none";
 }
 
 function filterDigitalArt() {
@@ -55,6 +91,7 @@ function filterDigitalArt() {
         noneText.style.display = "block";
     else
         noneText.style.display = "none";
+    document.getElementById("artDesc_cont").style.display = "none";
 }
 
 function filterMedia() {
@@ -66,6 +103,7 @@ function filterMedia() {
         noneText.style.display = "block";
     else
         noneText.style.display = "none";
+    document.getElementById("artDesc_cont").style.display = "none";
 }
 
 function filterAll() {
@@ -78,11 +116,13 @@ function filterAll() {
         noneText.style.display = "block";
     else
         noneText.style.display = "none";
+    document.getElementById("artDesc_cont").style.display = "none";
 }
 
 function openBuyMenu() {
     resetFilter();
     document.getElementById("artDesc_cont").style.display = "flex";
+    document.querySelector("#picShortInfo_cont img").src = picLink;
 }
 
 function openShopWindow() {
@@ -97,7 +137,7 @@ document.querySelector("#digitalArt_filter").addEventListener("click", filterDig
 document.querySelector("#media_filter").addEventListener("click", filterMedia);
 document.querySelector("#allArt_filter").addEventListener("click", filterAll);
 document.getElementById("addToCart").addEventListener("click", openShopWindow);
-document.getElementsByClassName("art_pic")[0].addEventListener("click", openBuyMenu);
+
 
 // page loaded
 
