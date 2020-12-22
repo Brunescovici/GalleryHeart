@@ -166,7 +166,9 @@ header {
 }
 
 .monthArtist img {
-    width: 400px;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
 }
 
 .monthArtist_cont p {
