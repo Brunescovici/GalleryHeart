@@ -38,9 +38,17 @@ function setPicture(data) {
         const Template = document.querySelector("#artPics_temp").content;
         const cloneArt = Template.cloneNode(true);
         cloneArt.querySelector(".art_pic").src = data.media_details.sizes.full.source_url;
+        if(x%4==1)
+            cloneArt.querySelector(".art_pic").classList.add("painting");
+        else if(x%4==2)
+            cloneArt.querySelector(".art_pic").classList.add("media");
+        else if(x%4==3)
+            cloneArt.querySelector(".art_pic").classList.add("photography");
+        else
+            cloneArt.querySelector(".art_pic").classList.add("digitalArt");
         const parentCont = document.querySelector(".art_cont");
         parentCont.appendChild(cloneArt);
-        x=1;
+        x+=1;
     }
 }
 
